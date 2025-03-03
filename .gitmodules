@@ -1,0 +1,6 @@
+[submodule "extensions/dynPolytope-controller-superbuild"]
+	path = extensions/dynPolytope-controller-superbuild
+	url = git@github.com:Hugo-L3174/dynPolytope-controller-superbuild.git
+[submodule "extensions/helpup-controller-superbuild"]
+	path = extensions/helpup-controller-superbuild
+	url = git@github.com:Hugo-L3174/helpup-controller-superbuild.git
