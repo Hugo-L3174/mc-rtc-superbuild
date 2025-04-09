@@ -211,10 +211,12 @@ if(EMSCRIPTEN)
 else()
   set(MC_RTC_EXTRA_OPTIONS)
 endif()
-AddProject(mc_rtc
+AddProject(
+  mc_rtc
   GITHUB Hugo-L3174/mc_rtc
-  GIT_TAG origin/topic/transformTargets
-  CMAKE_ARGS -DMC_LOG_UI_PYTHON_EXECUTABLE=${MC_LOG_UI_PYTHON_EXECUTABLE} ${MC_RTC_ROS_OPTION} ${MC_RTC_EXTRA_OPTIONS}
+  GIT_TAG origin/topic/DynamicConstraint
+  CMAKE_ARGS -DMC_LOG_UI_PYTHON_EXECUTABLE=${MC_LOG_UI_PYTHON_EXECUTABLE}
+             ${MC_RTC_ROS_OPTION} ${MC_RTC_EXTRA_OPTIONS}
   DEPENDS ${mc_rtc_DEPENDS}
   APT_PACKAGES libmc-rtc-dev mc-rtc-utils python-mc-rtc python3-mc-rtc
                ros-${ROS_DISTRO}-mc-rtc-plugin
