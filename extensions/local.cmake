@@ -14,7 +14,7 @@ AddProject(
   GIT_TAG origin/main
   CMAKE_ARGS -DMUJOCO_ROOT_DIR=${MUJOCO_ROOT_DIR}
   DEPENDS mc_rtc
-  APT_PACKAGES libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libglew-dev
+  APT_DEPENDENCIES libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libglew-dev
 )
 
 # Robots mujoco descriptions
@@ -49,8 +49,8 @@ endif()
 if(WITH_HUMAN)
   AddProject(
     human_mj_description
-    GITHUB Hugo-L3174/human_description
-    GIT_TAG origin/topic/mujoco
+    GITHUB_PRIVATE Hugo-L3174/human_mj_description
+    GIT_TAG origin/main
     DEPENDS mc_mujoco human_description
   )
 endif()
