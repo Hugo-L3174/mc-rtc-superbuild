@@ -162,8 +162,10 @@ endif()
 
 AddProject(
   tvm
-  GITHUB jrl-umi3218/tvm
-  GIT_TAG origin/master
+  # GITHUB jrl-umi3218/tvm
+  # GIT_TAG origin/master
+  GITHUB_PRIVATE Hugo-L3174/tvm
+  GIT_TAG origin/topic/DynamicConstraint
   DEPENDS eigen-qld eigen-quadprog lexls ${tvm_EXTRA_DEPENDS}
   CMAKE_ARGS -DTVM_WITH_QLD:BOOL=ON
              -DTVM_WITH_QUADPROG:BOOL=ON -DTVM_WITH_LEXLS:BOOL=ON
@@ -223,7 +225,7 @@ else()
 endif()
 AddProject(
   mc_rtc
-  GITHUB Hugo-L3174/mc_rtc
+  GITHUB_PRIVATE Hugo-L3174/mc_rtc
   GIT_TAG origin/topic/DynamicConstraint
   CMAKE_ARGS -DMC_LOG_UI_PYTHON_EXECUTABLE=${MC_LOG_UI_PYTHON_EXECUTABLE}
              ${MC_RTC_ROS_OPTION} ${MC_RTC_EXTRA_OPTIONS}
