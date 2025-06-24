@@ -11,7 +11,7 @@ include(${EXTENSIONS_DIR}/simulation/MuJoCo.cmake)
 AddProject(
   mc_mujoco
   GITHUB Hugo-L3174/mc_mujoco
-  GIT_TAG origin/main
+  GIT_TAG origin/topic/mocap_human
   CMAKE_ARGS -DMUJOCO_ROOT_DIR=${MUJOCO_ROOT_DIR}
   DEPENDS mc_rtc
   APT_DEPENDENCIES libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libglew-dev
